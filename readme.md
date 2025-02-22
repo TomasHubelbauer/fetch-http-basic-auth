@@ -5,6 +5,10 @@ Will the browser prompt for the credentials interactively and unblock the call
 once the user provides them or is it possible to provide the credentials in the
 HTTP request headers and have the request go through unattended?
 
+## How to run
+
+`bun --hot .`
+
 ## Conclusion
 
 The `Authorization` response header can be prepared with the challenge response
@@ -267,6 +271,8 @@ response for the valid credentials.
 I called the script that's linked from the HTML `index.tsx` to distinguish it
 from the `index.ts` used to implement the server since Bun supports JSX/TSX out
 of the box and this extension can be used even if it doesn't contain React code.
+
+Run using `bun --hot .`.
 
 I was able to demonstrate that hitting the endpoint with this pre-prepared
 challenge response allows the `fetch` call to succeed and no interactive user
