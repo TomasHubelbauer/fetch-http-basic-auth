@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Fetch HTTP basic auth</title>
+    <link rel="icon" href="https://fav.farm/🔑" />
+    <script src="index.tsx"></script>
+  </head>
+  <body>
+    <h1>Fetch HTTP basic auth</h1>
+    <button id="demo1Button">Fetch HTTP basic auth route</button>
+    <p>Things to try:</p>
+    <ul>
+      <li>Click the button and dismiss the credentials prompt for a 401</li>
+      <li>Click the button and fill in invalid credentials for a silent 401</li>
+      <ul>
+        <li>Note that this will cause the browser to re-prompt for access</li>
+        <li>Dismiss the repeat prompt to see the final 401</li>
+      </ul>
+      <li>Click the button and fill in valid credentials for a 200 JSON</li>
+      <ul>
+        <li>
+          User name:
+          <code id="userNameCode"></code>
+        </li>
+        <li>
+          Password:
+          <code id="passwordCode"></code>
+        </li>
+      </ul>
+      <li>Hit this again after the second demo to reuse stored credentials</li>
+      <li>
+        Go to <code id="urlCode"></code> and dismiss the credential prompt to
+        reset the remembered credentials
+        <ul>
+          <li>See the readme for why this works the way it does</li>
+        </ul>
+      </li>
+    </ul>
+    <button id="demo2Button">
+      Fetch HTTP basic auth route with <code>Authorization</code> header
+    </button>
+    <p>
+      Hitting this button will cause the <code>fetch</code> to provide the auth
+      non-interactively.
+    </p>
+    <br />
+  </body>
+</html>
